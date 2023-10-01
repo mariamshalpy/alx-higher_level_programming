@@ -1,8 +1,9 @@
 #!/usr/bin/python3
+
 """Solves the N-queens puzzle.
 
 Determines all possible solutions to placing N
-N non-attacking queens on an NxN chessboard.
+N n-attacking queens on an NxN chessboard.
 
 Example:
     $ ./101-nqueens.py N
@@ -36,6 +37,7 @@ def board_deepcopy(board):
 
 
 def get_solution(board):
+
     """Return the list of lists representation of a solved chessboard."""
     solution = []
     for r in range(len(board)):
@@ -47,6 +49,7 @@ def get_solution(board):
 
 
 def xout(board, row, col):
+
     """X out spots on a chessboard.
 
     All spots where non-attacking queens can no
@@ -54,8 +57,8 @@ def xout(board, row, col):
 
     Args:
         board (list): The current working chessboard.
-        row (int): The row where a queen was last played.
-        col (int): The column where a queen was last played.
+        row (int): The row a queen was last played.
+        col (int): The mn where a queen was last played.
     """
     # X out all forward spots
     for c in range(col + 1, len(board)):
