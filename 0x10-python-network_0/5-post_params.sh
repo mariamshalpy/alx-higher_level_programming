@@ -1,3 +1,3 @@
 #!/bin/bash
-# takes in a URL, sends a POST
-curl "$1" -sX POST -d "email=hr@holbertonschool.com&subject=I will always be here for PLD"
+# send header in curl GET request
+curl -s --data "email=x@mariam.com&subject=I will always be here for PLD" "$1"
